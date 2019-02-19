@@ -15,18 +15,18 @@ class RupeebizCcavenueServiceProvider extends ServiceProvider
          * Optional methods to load your package assets
          */
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'rupeebiz-ccavenue');
-         $this->loadViewsFrom(__DIR__.'/../resources/views', 'rupeebiz-ccavenue');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'rupeebiz-ccavenue');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-         $this->loadRoutesFrom(__DIR__.'/routes.php');
+        $this->loadRoutesFrom(__DIR__.'/routes/routes.php');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('rupeebiz-ccavenue.php'),
+              __DIR__.'/../config/wallet.php' => config_path('rupeebiz-ccavenue.php'),
             ], 'config');
 
-            // Publishing the views.
+            //Publishing the views.
             $this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/rupeebiz-ccavenue'),
+              __DIR__.'/../resources/views' => resource_path('views/vendor/rupeebiz-ccavenue'),
             ], 'views');
 
             // Publishing assets.
@@ -50,7 +50,7 @@ class RupeebizCcavenueServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'rupeebiz-ccavenue');
+        $this->mergeConfigFrom(__DIR__.'/../config/wallet.php', 'rupeebiz-ccavenue');
 
         // Register the main class to use with the facade
         $this->app->singleton('rupeebiz-ccavenue', function () {

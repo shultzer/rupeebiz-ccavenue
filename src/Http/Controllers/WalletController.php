@@ -10,6 +10,5 @@ class WalletController extends Controller
 
     public function walletrecharge (  ) {
 
-        return view('shultz::recharge');
-    }
+        return view('rupeebiz-ccavenue::recharge');    }
 }

@@ -25,12 +25,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Shultzer\\RupeebizCcavenue\\": "src"
+            "Shultzer\\RupeebizCcavenue\\": "src",
+            "Shultzer\\RupeebizCcavenue\\Controller\\": "src/HTTP/Controllers"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Shultzer\\RupeebizCcavenue\\Tests\\": "tests"
+
         }
     },
     "scripts": {

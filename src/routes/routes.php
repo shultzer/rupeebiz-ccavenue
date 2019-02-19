@@ -1,5 +1,5 @@
 <?php
-$namespace  = 'Shultz\Http\Controllers';
+$namespace  = 'Shultzer\RupeebizCcavenue\Controller';
 Route::group([
   'namespace' => $namespace,
 ], function()
