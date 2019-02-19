@@ -1,0 +1,11 @@
+{
+    "name": "shultzer/rupeebiz-ccavenue",
+    "description": "Package for Laravel",
+    "authors": [
+        {
+            "name": "Sergei",
+            "email": "skorohods@mail.ru"
+        }
+    ],
+    "require": {}
+}
