@@ -1,29 +1,53 @@
 {
     "name": "shultzer/rupeebiz-ccavenue",
-    "description": "Package for Laravel",
+    "description": "",
+    "keywords": [
+        "shultzer",
+        "rupeebiz-ccavenue"
+    ],
+    "homepage": "https://github.com/shultzer/rupeebiz-ccavenue",
+    "license": "MIT",
+    "type": "library",
     "authors": [
         {
-            "name": "Sergei",
-            "email": "skorohods@mail.ru"
+            "name": "Sergei Skorohod",
+            "email": "skorohods@mail.ru",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.1.3",
-        "guzzlehttp/guzzle": "~6.0",
-        "illuminate/contracts": "~5.7.0|~5.8.0"
+        "php": "^7.1",
+        "illuminate/support": "5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.7.*",
+        "phpunit/phpunit": "^7.0"
     },
     "autoload": {
         "psr-4": {
-            "Shultz\\":"src/"
+            "Shultzer\\RupeebizCcavenue\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Shultzer\\RupeebizCcavenue\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
     "extra": {
-        "shultz": {
+        "laravel": {
             "providers": [
-                "Shultz\\WalletServiceProvider"
+                "Shultzer\\RupeebizCcavenue\\RupeebizCcavenueServiceProvider"
             ],
             "aliases": {
-                "Wallet": "Shultz\\Facades\\Socialite"
+                "RupeebizCcavenue": "Shultzer\\RupeebizCcavenue\\RupeebizCcavenueFacade"
             }
         }
     }

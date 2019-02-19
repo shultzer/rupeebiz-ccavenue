@@ -1,12 +1,10 @@
 <?php
 
-namespace Shultz;
-
+namespace Shultzer\RupeebizCcavenue;
 use GuzzleHttp\Client;
 
-class Wallet
+class RupeebizCcavenue
 {
-
     public static function recharge_mobile ( $user, $rechargeamount, $currency, $tel, $operator, $fromwallet ) {
         $user_wallet = $user->wallet;
         $order_id    = 'ZAP_' . time();
