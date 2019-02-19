@@ -26,6 +26,7 @@
     "autoload": {
         "psr-4": {
             "Shultzer\\RupeebizCcavenue\\": "src",
+            "Shultzer\\RupeebizCcavenue\\Models\\": "src/Http",
             "Shultzer\\RupeebizCcavenue\\Controller\\": "src/HTTP/Controllers"
         }
     },
